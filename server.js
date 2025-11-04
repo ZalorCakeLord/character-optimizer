@@ -283,7 +283,9 @@ app.get('/', (req, res) => {
   `);
 });
 
-
+app.get('/healthz', (req, res) => {
+  res.status(200).send('OK');
+});
 
 app.post('/analyze', async (req, res) => {
   const { characterData } = req.body;
@@ -359,5 +361,6 @@ ${characterData}`;
 app.listen(port, () => {
   console.log(`Optimizer running on port ${port}`);
 });
+
 
 
