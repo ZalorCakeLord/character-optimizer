@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const port = 8100;
+const port = process.env.PORT || 8100;
 const analysisCounts = new Map();
 
 app.use(express.json());
@@ -359,3 +359,4 @@ app.listen(port, () => {
   console.log(`Optimizer running at http://localhost:${port}`);
 
 });
+
