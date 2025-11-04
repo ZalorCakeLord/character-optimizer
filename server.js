@@ -359,9 +359,10 @@ ${characterData}`;
   }
 });
 
-app.listen(port, '0.0.0.0', () => {
-  console.log(`Optimizer running at http://0.0.0.0:${port}`);
+app.listen(port, () => {
+  console.log(`Optimizer running on port ${port}`); 
 });
+
 
 
 
