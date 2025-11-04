@@ -4,6 +4,12 @@ const app = express();
 const port = process.env.PORT;
 const analysisCounts = new Map();
 
+
+app.get('/healthz', (req, res) => {
+  console.log("Health was checked")
+  res.status(200).send('OK');
+});
+
 app.use(express.json());
 
 app.get('/', (req, res) => {
@@ -282,10 +288,6 @@ app.get('/', (req, res) => {
   `);
 });
 
-app.get('/healthz', (req, res) => {
-  console.log("Health was checked")
-  res.status(200).send('OK');
-});
 
 app.post('/analyze', async (req, res) => {
   const { characterData } = req.body;
@@ -361,6 +363,7 @@ ${characterData}`;
 app.listen(port, '0.0.0.0', () => {
   console.log(`Optimizer running at http://0.0.0.0:${port}`);
 });
+
 
 
 
