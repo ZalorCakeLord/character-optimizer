@@ -283,7 +283,6 @@ app.get('/', (req, res) => {
 });
 
 
-console.log(process.env.OPENROUTER_API_KEY)
 
 app.post('/analyze', async (req, res) => {
   const { characterData } = req.body;
@@ -358,4 +357,5 @@ ${characterData}`;
 
 app.listen(port, () => {
   console.log(`Optimizer running at http://localhost:${port}`);
+
 });
