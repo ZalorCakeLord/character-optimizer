@@ -1,5 +1,4 @@
 const express = require('express');
-const fetch = require('node-fetch');
 const app = express();
 const port = process.env.PORT;
 const analysisCounts = new Map();
@@ -362,6 +361,7 @@ ${characterData}`;
 app.listen(port, () => {
   console.log(`Optimizer running on port ${port}`); 
 });
+
 
 
 
