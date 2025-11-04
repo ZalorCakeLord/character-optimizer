@@ -6,8 +6,8 @@ const analysisCounts = new Map();
 
 
 app.get('/healthz', (req, res) => {
-  console.log("Health was checked")
-  res.status(200).send('OK');
+  //console.log("Health was checked")
+  res.sendStatus(200);
 });
 
 app.use(express.json());
@@ -363,6 +363,7 @@ ${characterData}`;
 app.listen(port, '0.0.0.0', () => {
   console.log(`Optimizer running at http://0.0.0.0:${port}`);
 });
+
 
 
 
