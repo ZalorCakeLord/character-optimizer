@@ -244,10 +244,10 @@ app.get('/', (req, res) => {
             </div>
 
             <div class="input-section">
-              <label for="characterData">Character JSON Data</label>
+              <label for="characterData">Character Data</label>
               <textarea 
                 id="characterData" 
-                placeholder="Paste your character JSON here..."
+                placeholder="Paste your character's personality data here..."
                 spellcheck="false"
               ></textarea>
             </div>
@@ -361,6 +361,7 @@ ${characterData}`;
 app.listen(port, () => {
   console.log(`Optimizer running on port ${port}`); 
 });
+
 
 
 
