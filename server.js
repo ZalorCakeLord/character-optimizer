@@ -5,7 +5,6 @@ const port = process.env.PORT || 8100;
 const analysisCounts = new Map();
 
 app.use(express.json());
-app.use(express.static('public'));
 
 app.get('/', (req, res) => {
   res.send(`
@@ -358,9 +357,10 @@ ${characterData}`;
   }
 });
 
-app.listen(port, () => {
-  console.log(`Optimizer running on port ${port}`);
+app.listen(port, '0.0.0.0', () => {
+  console.log(`Optimizer running at http://0.0.0.0:${port}`);
 });
+
 
 
 
