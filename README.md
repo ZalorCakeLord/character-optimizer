@@ -9,7 +9,7 @@ Get detailed, actionable feedback to improve your AI roleplay characters. Powere
 - Simple web interface
 
 ## Live Demo
-Coming Soon
+[Available here, three analyses per person.](https://character-optimizer-production.up.railway.app/)
 
 ## Tech Stack
 - Node.js + Express
